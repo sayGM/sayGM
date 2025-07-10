@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="loading-screen">
+  <div class="loader">0x628</div>
+  </div>
   <header>
     <div class="logo">0x628</div>
     <nav>
@@ -43,5 +46,21 @@
   <footer>
     <p>© 2025 0x628. Semua Hak Dilindungi.</p>
   </footer>
+  <script>
+  window.addEventListener("load", () => {
+    document.getElementById("loading-screen").style.display = "none";
+  });
+  </script>
+  <script>
+  const links = document.querySelectorAll('nav a');
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      link.style.color = '#ff3c00';
+      setTimeout(() => {
+        link.style.color = '#eee';
+      }, 300);
+    });
+  });
+  </script>
 </body>
 </html>
