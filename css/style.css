@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #111;
+  background-color: #0d0d0d;
   color: #eee;
 }
 
@@ -9,20 +9,24 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em;
+  padding: 1.5em 2em;
   background-color: #000;
+  flex-wrap: wrap;
 }
 
 .logo {
   font-size: 2em;
-  color: #ff3c00;
   font-weight: bold;
+  color: #ff3c00;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 1.5em;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -38,12 +42,11 @@ nav a {
 
 .hero h1 {
   font-size: 2.5em;
-  margin-bottom: 0.3em;
 }
 
 .hero h2 {
-  font-size: 2em;
   color: #ff3c00;
+  font-size: 2em;
 }
 
 .hero p {
@@ -51,11 +54,17 @@ nav a {
   margin: 1em auto;
 }
 
-.social-icons a {
+.profile {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  border: 3px solid #ff3c00;
+}
+
+.social-icons a img {
+  width: 30px;
   margin: 0 0.5em;
-  color: #ff3c00;
-  text-decoration: none;
-  font-size: 1.2em;
+  vertical-align: middle;
 }
 
 footer {
@@ -63,4 +72,13 @@ footer {
   padding: 1.5em;
   background-color: #222;
   color: #aaa;
+}
+
+/* ✅ Tampilan desktop meskipun di HP */
+@media only screen and (max-width: 768px) {
+  body {
+    zoom: 85%;
+    width: 1024px;
+    overflow-x: scroll;
+  }
 }
