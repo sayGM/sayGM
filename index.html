@@ -4,81 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>sayGM</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>  
-  <script>
-  window.addEventListener("load", () => {
-    document.getElementById("loading-screen").style.display = "none";
-  });
-  </script>
-  <script>
-  const links = document.querySelectorAll('nav a');
-  links.forEach(link => {
-    link.addEventListener('click', e => {
-      link.style.color = '#ff3c00';
-      setTimeout(() => {
-        link.style.color = '#eee';
-      }, 300);
-    });
-  });
-  </script>
+<body>
+
   <div id="loading-screen">
-  <div class="loader">sayGM</div>
+    <div class="loader">
+      <i class="fa-solid fa-satellite-dish"></i>
+      <span>sayGM</span>
+    </div>
   </div>
+
   <header>
-    <div class="logo">sayGM</div>
+    <div class="logo"><i class="fa-solid fa-cube"></i> sayGM</div>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+
     <nav>
       <ul>
-        <li><a href="/">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#services">SERVICE</a></li>
-        <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#blog">BLOG</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#about"><i class="fa-solid fa-user"></i> About</a></li>
+        <li><a href="/app/service.html"><i class="fa-solid fa-screwdriver-wrench"></i> Service</a></li>
+        <li><a href="/app/portfolio.html"><i class="fa-solid fa-chart-pie"></i> Portfolio</a></li>
+        <li><a href="#blog"><i class="fa-solid fa-pen-nib"></i> Blog</a></li>
+        <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="hero" id="home">
-    <img src="https://avatars.githubusercontent.com/u/153478795?v=4&size=64" alt="Foto Baby" class="profile">
+    <img src="https://avatars.githubusercontent.com/u/153478795?v=4&size=64" alt="Profile photo" class="profile">
     <h1>Welcome!</h1>
-    <h2>I Am <font color="#fff">[sayGM]</font></h2>
-    <p>We Are Blockchain Enthusiast and Developer Web.</p>
+    <h2>I Am <span class="accent">sayGM</span></h2>
+    <p>We are a blockchain enthusiast and web developer.</p>
     <div class="social-icons">
-      <a href="#"><img src="icon-fb.png" alt="Facebook"></a>
-      <a href="#"><img src="icon-tw.png" alt="Twitter"></a>
-      <a href="#"><img src="icon-ig.png" alt="Instagram"></a>
-      <a href="#"><img src="icon-li.png" alt="LinkedIn"></a>
-      <a href="#"><img src="icon-be.png" alt="Behance"></a>
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
     </div>
   </section>
 
   <section id="about">
-    <h2>Hello, I Am sayGM</h2>
+    <h2><i class="fa-solid fa-user-astronaut"></i> Hello, I Am sayGM</h2>
     <p>Enthusiast, Degen, Trader</p>
   </section>
 
-    <h1>Portofolio Kripto</h1>
-    <p>Distribusi aset digital berdasarkan alokasi nilai</p>
-
-  <section class="chart-section">
-    <canvas id="cryptoChart"></canvas>
-    <div class="allocations">
-      <ul>
-        <li><strong>ETH</strong>: 63.93% – $754.75</li>
-        <li><strong>USDT</strong>: 13.59% – $160.44</li>
-        <li><strong>NEIRO</strong>: 11.73% – $138.52</li>
-        <li><strong>JUP</strong>: 6.40% – $75.61</li>
-        <li><strong>WCT</strong>: 4.03% – $47.52</li>
-        <li><strong>OTHERS</strong>: 0.32% – $3.73</li>
-      </ul>
-    </div>
-  </section>
   <footer>
-    <p>© 2025 sayGM. Privacy</p>
+    <p>&copy; 2025 sayGM. <i class="fa-solid fa-lock"></i> Privacy</p>
   </footer>
-<script src="js/chartx.js"></script>
+
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("loading-screen").classList.add("hidden");
+    });
+
+    const navToggle = document.getElementById('nav-toggle');
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        link.classList.add('active-flash');
+        setTimeout(() => link.classList.remove('active-flash'), 300);
+        if (navToggle) navToggle.checked = false;
+      });
+    });
+  </script>
 </body>
 </html>
