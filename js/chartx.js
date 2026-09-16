@@ -8,16 +8,16 @@ new Chart(ctx, {
       backgroundColor: [
         '#ff6384', '#36a2eb', '#ffce56', '#8e44ad', '#00b894', '#636e72'
       ],
+      borderColor: '#0d0d0d',
+      borderWidth: 2,
+      hoverOffset: 10
     }]
   },
   options: {
     responsive: true,
     plugins: {
       legend: {
-        position: 'bottom',
-        labels: {
-          color: '#eee'
-        }
+        display: false
       },
       tooltip: {
         callbacks: {
