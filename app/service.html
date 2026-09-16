@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sayGM — Service</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo"><i class="fa-solid fa-cube"></i> sayGM</div>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <nav>
+      <ul>
+        <li><a href="/index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="/index.html#about"><i class="fa-solid fa-user"></i> About</a></li>
+        <li><a href="/app/service.html" class="active-flash"><i class="fa-solid fa-screwdriver-wrench"></i> Service</a></li>
+        <li><a href="/app/portfolio.html"><i class="fa-solid fa-chart-pie"></i> Portfolio</a></li>
+        <li><a href="/index.html#blog"><i class="fa-solid fa-pen-nib"></i> Blog</a></li>
+        <li><a href="/index.html#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="coming-soon">
+    <i class="fa-solid fa-screwdriver-wrench coming-soon-icon"></i>
+    <h1>Coming Soon</h1>
+    <p>The service page is currently under construction. Check back soon.</p>
+    <a href="/index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 sayGM. <i class="fa-solid fa-lock"></i> Privacy</p>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navToggle) navToggle.checked = false;
+      });
+    });
+  </script>
+</body>
+</html>
