@@ -13,12 +13,10 @@ eth = data["ethereum"]["usd"]
 now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
 block = (
-    "<!-- MARKET:START -->\n"
-    "| BTC | ETH |\n"
-    "| :---: | :---: |\n"
-    f"| ${btc:,.0f} | ${eth:,.0f} |\n\n"
-    f"<sub>Updated {now}</sub>\n"
-    "<!-- MARKET:END -->"
+    "<!-- MARKER_START -->\n\n"
+    f"**BTC** ${btc:,.0f} · **ETH** ${eth:,.0f}\n\n"
+    f"<sub>Updated {now}</sub>\n\n"
+    "<!-- MARKER_END -->"
 )
 
 with open("README.md", "r", encoding="utf-8") as f:
