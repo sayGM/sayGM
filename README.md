@@ -44,7 +44,7 @@ I focus on web development and the blockchain ecosystem. My day-to-day work cove
 
 | Project | Description |
 | :--- | :--- |
-| [**project-name-1**](https://github.com/sayGM/sayGM) | Short description of your first project |
+| [**SayGM**](https://github.com/sayGM/sayGM) | Short description of your first project |
 
 </details>
 
@@ -68,7 +68,7 @@ I focus on web development and the blockchain ecosystem. My day-to-day work cove
 
 <br>
 
-- Website: [your-site.vercel.app](https://sayGM.vercel.app)
+- Website: [saygm.app](https://sayGM.vercel.app)
 - Twitter/X: [@username](https://x.com/)
 - Email: your@email.com
 
