@@ -12,7 +12,7 @@ Building Ethereum tools, clean web interfaces, and crypto market utilities.
 
 ![Followers](https://img.shields.io/github/followers/sayGM?style=flat-square&color=14B8A6&label=followers)
 ![Stars](https://img.shields.io/github/stars/sayGM?style=flat-square&color=14B8A6&label=stars&affiliations=OWNER)
-![Repos](https://img.shields.io/badge/dynamic/json?style=flat-square&color=14B8A6&label=repos&query=public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2FsayGM)
+
 
 </div>
 
