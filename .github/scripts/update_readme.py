@@ -22,12 +22,15 @@ block = (
 with open("README.md", "r", encoding="utf-8") as f:
     content = f.read()
 
-new_content = re.sub(
-    r"<!-- MARKET:START -->.*?<!-- MARKET:END -->",
-    block,
+new_content, count = re.subn(
+    r"<!-- MARKER_START -->.*?<!-- MARKER_END -->",
+    lambda m: block,
     content,
     flags=re.DOTALL,
 )
+
+if count == 0:
+    raise SystemExit("Error: marker block not found in README.md")
 
 with open("README.md", "w", encoding="utf-8") as f:
     f.write(new_content)
