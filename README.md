@@ -12,9 +12,9 @@ Building Ethereum tools, clean web interfaces, and crypto market utilities.
 
 <!-- MARKER_START -->
 
-**BTC** $60,090 · **ETH** $1,679
+**BTC** $59,492 · **ETH** $1,669
 
-<sub>Updated 2026-11-21 22:55 UTC</sub>
+<sub>Updated 2026-11-22 02:54 UTC</sub>
 
 <!-- MARKER_END -->
 
